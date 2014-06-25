@@ -15,7 +15,7 @@
 
 class UnimplementedMethodException : std::exception {};
 
-class Method : Object {
+class Method : public Object {
     bool is_primitive;
     std::function<Object(Object)> primitive;
 public:
