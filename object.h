@@ -19,8 +19,8 @@ class Hash;
 class Object {
     
 public:
-    Hash *members; // Hash<String, Object>
-    Hash *methods; // Hash<String, Method>
+    Hash *members;
+    Hash *methods;
     
     void add_member(std::string, Object *);
     void add_method(std::string, std::function<Object *(Object *, Array *)>);
