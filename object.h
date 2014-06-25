@@ -26,7 +26,7 @@ public:
     obj_id getID() { return id; }
 };
 
-typedef class ObjectBuilder {
+class ObjectBuilder {
 protected:
     static obj_id next_id;
     Object obj;
@@ -35,7 +35,7 @@ public:
         obj.id = next_id++;
         return obj;
     }
-} NewObject;
+};
 
 obj_id ObjectBuilder::next_id = 0;
 
