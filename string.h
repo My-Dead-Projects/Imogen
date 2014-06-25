@@ -16,6 +16,8 @@ class String : public Object {
     
 public:
     std::string data;
+    String() {}
+    String(std::string str) : data(str) {}
 };
 
 #endif
