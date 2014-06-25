@@ -24,11 +24,11 @@ public:
             throw new UnimplementedException;
         }
     }
-//    Method() {
-//        is_primitive = false;
-//    }
-//    Method(std::function<Object(Object)> func) {
-//        is_primitive = true;
-//        primitive = func;
-//    }
+    Method() {
+        is_primitive = false;
+    }
+    Method(std::function<Object(Object)> func) {
+        is_primitive = true;
+        primitive = func;
+    }
 };
