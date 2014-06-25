@@ -16,6 +16,10 @@ class Hash : public Object {
     
 public:
     std::unordered_map<Object *, Object *> data;
+    
+    void add(Object * key, Object * value) {
+        data.insert(std::pair<Object *, Object *>(key, value));
+    }
 };
 
 #endif
