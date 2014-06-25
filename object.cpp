@@ -20,12 +20,10 @@ Object::Object() {
 }
 
 void Object::add_member(std::string str, Object * member) {
-    members->data.insert(std::pair<Object *, Object *>(new String(str), member));
+    members->add(new String(str), member);
 }
 
 void Object::add_method(std::string str,
                         std::function<Object *(Object *, Array *)> method) {
-    methods->data.insert(std::pair<Object *, Object *>(new String(str),
-                                                       new Method(method))
-                         );
+    methods->add(new String(str), new Method(method));
 }
