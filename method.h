@@ -11,7 +11,7 @@
 #include <functional>
 #include <exception>
 
-class UnimplementedException : std::exception {};
+class UnimplementedMethodException : std::exception {};
 
 class Method : Object {
     bool is_primitive;
@@ -21,7 +21,7 @@ public:
         if (is_primitive) {
             return primitive(o);
         } else {
-            throw new UnimplementedException;
+            throw new UnimplementedMethodException;
         }
     }
     Method() {
