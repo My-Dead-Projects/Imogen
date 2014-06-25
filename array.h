@@ -15,7 +15,7 @@
 class Array : public Object {
     
 public:
-    std::vector<Object> data;
+    std::vector<Object *> data;
 };
 
 #endif
