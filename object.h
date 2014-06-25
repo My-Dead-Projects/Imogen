@@ -9,16 +9,12 @@
 #ifndef imogen_object_h
 #define imogen_object_h
 
-#include <string>
-#include <vector>
-#include <unordered_map>
-
 #define obj_id size_t
 
 class Object {
 protected:
-    std::vector<Object> members;
-    std::unordered_map<std::string, Object> methods;
+    Object *members;
+    Object *methods;
 public:
     Object() {}
 };
