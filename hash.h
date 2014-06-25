@@ -12,5 +12,5 @@
 class Hash : public Object {
     
 public:
-    std::unordered_map<Object *, Object> data;
+    std::unordered_map<Object *, Object *> data;
 };
