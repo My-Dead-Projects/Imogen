@@ -18,5 +18,5 @@ struct __obj_hash_func {
 class Hash : public Object {
     
 public:
-    std::unordered_map<Object, Object, __obj_hash_func> data;
+    std::unordered_map<Object *, Object> data;
 };
