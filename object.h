@@ -16,27 +16,11 @@
 #define obj_id size_t
 
 class Object {
-    friend class ObjectBuilder;
-    Object() {}
 protected:
-    obj_id id;
     std::vector<Object> members;
     std::unordered_map<std::string, Object> methods;
 public:
-    obj_id getID() { return id; }
+    Object() {}
 };
-
-class ObjectBuilder {
-protected:
-    static obj_id next_id;
-    Object obj;
-public:
-    Object make() {
-        obj.id = next_id++;
-        return obj;
-    }
-};
-
-obj_id ObjectBuilder::next_id = 0;
 
 #endif

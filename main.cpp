@@ -10,13 +10,5 @@
 #include <iostream>
 
 int main() {
-    std::cout<<ObjectBuilder().make().getID()<<std::endl;
-    std::cout<<ObjectBuilder().make().getID()<<std::endl;
     
-    ObjectBuilder ob = ObjectBuilder();
-    
-    std::cout<<ObjectBuilder().make().getID()<<std::endl;
-    std::cout<<ObjectBuilder().make().getID()<<std::endl;
-    
-    std::cout<<ob.make().getID()<<std::endl;
 }
