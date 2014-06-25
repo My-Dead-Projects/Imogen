@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Michael Dorst. All rights reserved.
 //
 
+#ifndef imogen_method_h
+#define imogen_method_h
 
 #include "object.h"
 #include <functional>
@@ -32,3 +34,5 @@ public:
         primitive = func;
     }
 };
+
+#endif
