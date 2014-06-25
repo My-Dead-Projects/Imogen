@@ -9,14 +9,23 @@
 #ifndef imogen_object_h
 #define imogen_object_h
 
+#include <functional>
+#include <string>
 #define obj_id size_t
 
+class Array;
+class Hash;
+
 class Object {
-protected:
-    Object *members;
-    Object *methods;
+    
 public:
-    Object() {}
+    Hash *members; // Hash<String, Object>
+    Hash *methods; // Hash<String, Method>
+    
+    void add_member(std::string, Object *);
+    void add_method(std::string, std::function<Object *(Object *, Array *)>);
+    
+    Object();
 };
 
 #endif
