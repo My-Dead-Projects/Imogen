@@ -17,7 +17,7 @@ class Method : Object {
     bool is_primitive;
     std::function<Object(Object)> primitive;
 public:
-    Object call(Object o) {
+    Object operator()(Object o) {
         if (is_primitive) {
             return primitive(o);
         } else {
