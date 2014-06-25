@@ -9,12 +9,6 @@
 #include "object.h"
 #include <unordered_map>
 
-struct __obj_hash_func {
-    size_t operator()(Object obj) {
-        return obj.getID();
-    }
-};
-
 class Hash : public Object {
     
 public:
