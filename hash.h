@@ -9,9 +9,14 @@
 #include "object.h"
 #include <unordered_map>
 
+struct __obj_hash_func {
+    size_t operator()(Object obj) {
+        return obj.getID();
+    }
+};
+
 class Hash : public Object {
     
 public:
-    //needs to be specialized for Object.
-    //std::unordered_map<Object, Object> data;
+    std::unordered_map<Object, Object, __obj_hash_func> data;
 };
