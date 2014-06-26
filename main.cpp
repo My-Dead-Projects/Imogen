@@ -11,4 +11,5 @@
 
 int main() {
     Object * obj = new Object;
+    std::cout<<obj->call_method("description", new Array())<<std::endl;
 }

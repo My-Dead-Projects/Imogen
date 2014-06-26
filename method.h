@@ -13,7 +13,9 @@
 #include "array.h"
 #include <exception>
 
-class UnimplementedMethodException : std::exception {};
+namespace Error {
+    class UnimplementedMethod : std::exception {};
+}
 
 class Method : public Object {
     bool is_primitive;
@@ -23,7 +25,7 @@ public:
         if (is_primitive) {
             return primitive(self, args);
         } else {
-            throw new UnimplementedMethodException;
+            throw new Error::UnimplementedMethod;
         }
     }
     Method() {
