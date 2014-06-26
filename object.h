@@ -15,6 +15,7 @@
 
 #define obj_id size_t
 #define method_t std::function<Object *(Object *, Array *)>
+#define method_def(m_name) Object * m_name(Object * self, Array * args)
 
 class Array;
 
