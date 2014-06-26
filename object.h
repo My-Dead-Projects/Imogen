@@ -10,20 +10,23 @@
 #define imogen_object_h
 
 #include <functional>
+#include <unordered_map>
 #include <string>
+
 #define obj_id size_t
+#define method_t std::function<Object *(Object *, Array *)>
 
 class Array;
-class Hash;
 
 class Object {
     
 public:
-    Hash *members;
-    Hash *methods;
+    
+    std::unordered_map<std::string, Object *> members;
+    std::unordered_map<std::string, method_t> methods;
     
     void add_member(std::string, Object *);
-    void add_method(std::string, std::function<Object *(Object *, Array *)>);
+    void add_method(std::string, method_t);
     
     Object();
 };

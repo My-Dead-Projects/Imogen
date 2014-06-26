@@ -15,15 +15,13 @@
 Object * obj_methods(Object *, Array *);
 
 Object::Object() {
-    members = new Hash;
-    methods = new Hash;
+    
 }
 
 void Object::add_member(std::string str, Object * member) {
-    members->add(new String(str), member);
+    members.insert(std::pair<std::string, Object *>(str, member));
 }
 
-void Object::add_method(std::string str,
-                        std::function<Object *(Object *, Array *)> method) {
-    methods->add(new String(str), new Method(method));
+void Object::add_method(std::string str, method_t method) {
+    methods.insert(std::pair<std::string, method_t>(str, method));
 }
