@@ -22,8 +22,8 @@ class Object {
     
 public:
     
-    std::unordered_map<std::string, Object *> members;
-    std::unordered_map<std::string, method_t> methods;
+    std::unordered_map<std::string, Object *> member_hash;
+    std::unordered_map<std::string, method_t> method_hash;
     
     void add_member(std::string, Object *);
     void add_method(std::string, method_t);
