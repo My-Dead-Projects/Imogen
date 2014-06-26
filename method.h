@@ -11,14 +11,13 @@
 
 #include "object.h"
 #include "array.h"
-#include <functional>
 #include <exception>
 
 class UnimplementedMethodException : std::exception {};
 
 class Method : public Object {
     bool is_primitive;
-    std::function<Object *(Object *, Array *)> primitive;
+    method_t primitive;
 public:
     Object * operator()(Object * self, Array * args) {
         if (is_primitive) {
@@ -30,7 +29,7 @@ public:
     Method() {
         is_primitive = false;
     }
-    Method(std::function<Object *(Object *, Array *)> func) {
+    Method(method_t func) {
         is_primitive = true;
         primitive = func;
     }
