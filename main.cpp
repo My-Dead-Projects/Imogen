@@ -10,5 +10,5 @@
 #include <iostream>
 
 int main() {
-    
+    Object * obj = new Object;
 }
