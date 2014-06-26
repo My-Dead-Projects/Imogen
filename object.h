@@ -28,6 +28,8 @@ public:
     void add_member(std::string, Object *);
     void add_method(std::string, method_t);
     
+    Object * get_member(std::string);
+    
     Object();
 };
 

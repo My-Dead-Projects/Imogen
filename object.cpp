@@ -18,10 +18,14 @@ Object::Object() {
     
 }
 
-void Object::add_member(std::string str, Object * member) {
-    members.insert(std::pair<std::string, Object *>(str, member));
+void Object::add_member(std::string m_name, Object * member) {
+    members.insert(std::pair<std::string, Object *>(m_name, member));
 }
 
-void Object::add_method(std::string str, method_t method) {
-    methods.insert(std::pair<std::string, method_t>(str, method));
+void Object::add_method(std::string m_name, method_t method) {
+    methods.insert(std::pair<std::string, method_t>(m_name, method));
+}
+
+Object * Object::get_member(std::string m_name) {
+    return members.at(m_name);
 }
