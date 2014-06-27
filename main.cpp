@@ -11,5 +11,5 @@
 
 int main() {
     IO * out = new IO;
-    out->call_method("println", A({S("test "), S("strings\n")}));
+    out->call("println", A({S("test "), S("strings\n")}));
 }

@@ -26,11 +26,11 @@ void Object::add_method(std::string m_name, method_t method) {
     method_hash.insert(std::pair<std::string, method_t>(m_name, method));
 }
 
-Object * Object::get_member(std::string m_name) {
+Object * Object::get(std::string m_name) {
     return member_hash.at(m_name);
 }
 
-Object * Object::call_method(std::string m_name, Array * args) {
+Object * Object::call(std::string m_name, Array * args) {
     try {
         return method_hash.at(m_name)(this, args);
     } catch (std::out_of_range) {

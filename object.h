@@ -29,8 +29,8 @@ public:
     void add_member(std::string, Object *);
     void add_method(std::string, method_t);
     
-    Object * get_member(std::string);
-    Object * call_method(std::string, Array *);
+    Object * get(std::string);
+    Object * call(std::string, Array *);
     
     Object();
     virtual ~Object() {}
