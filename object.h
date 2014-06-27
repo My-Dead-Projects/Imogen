@@ -33,6 +33,7 @@ public:
     Object * call_method(std::string, Array *);
     
     Object();
+    virtual ~Object() {}
 };
 
 extern Object * nil;
