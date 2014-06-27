@@ -12,10 +12,16 @@
 #include "object.h"
 #include <vector>
 
+#define A new Array
+
 class Array : public Object {
     
 public:
     std::vector<Object *> data;
+    Array() {}
+    Array(std::vector<Object *> v) {
+        data = v;
+    }
 };
 
 #endif

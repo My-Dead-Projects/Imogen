@@ -12,6 +12,8 @@
 #include "object.h"
 #include <string>
 
+#define S new String
+
 class String : public Object {
     
 public:
