@@ -40,6 +40,7 @@ extern Object * nil;
 
 namespace Error {
     class MethodMissing : std::exception {};
+    class MemberMissing : std::exception {};
 }
 
 #endif

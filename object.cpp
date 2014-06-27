@@ -27,7 +27,11 @@ void Object::add_method(std::string m_name, method_t method) {
 }
 
 Object * Object::get(std::string m_name) {
-    return member_hash.at(m_name);
+    try {
+        return member_hash.at(m_name);
+    } catch (std::out_of_range) {
+        throw new Error::MemberMissing;
+    }
 }
 
 Object * Object::call(std::string m_name, Array * args) {
