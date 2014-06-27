@@ -10,6 +10,6 @@
 #include <iostream>
 
 int main() {
-    Object * obj = new Object;
-    
+    IO * out = new IO;
+    out->call_method("println", A({S("test "), S("strings\n")}));
 }

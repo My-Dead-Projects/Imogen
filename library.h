@@ -13,5 +13,6 @@
 #include "array.h"
 #include "hash.h"
 #include "method.h"
+#include "io.h"
 
 #endif
